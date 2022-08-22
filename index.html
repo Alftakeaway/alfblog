@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Alfredo's sheets">
+    <meta name="generator" content="Hugo 0.98.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Blog Live Ops</title>
+
+    <link rel="canonical" href="https://www.google.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        body {
+            font-family: 'Amaranth', sans-serif;
+            background: url(https://images.unsplash.com/photo-1529279363962-3480726a0a7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            background-size: cover;
+            overflow: auto;
+            opacity: 99%;
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+
+        }
+    </style>
+    <style>
+        :root {
+            --animate-duration: 800ms;
+            --animate-delay: 2s;
+        }
+    </style>
+
+
+
+
+    <style>
+        .aqua {
+            color: #4085e0;
+        }
+
+        .violetto {
+            color: #323257;
+        }
+
+        .cyan {
+            color: #0dcaf0;
+        }
+
+        .indigo {
+            color: #6610f2;
+        }
+
+        .avorio {
+            color: #d6d8ca;
+        }
+
+        .teal {
+            color: #20c997;
+        }
+
+        .urgent {
+            color: #ff8000;
+        }
+
+        .purple {
+            color: #7F00FF;
+        }
+
+        .pink {
+            color: #BF40BF;
+        }
+
+        .blog-header {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-header-logo {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+            ;
+            font-size: 2.25rem;
+        }
+
+        .blog-header-logo:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+            ;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .display-4 {
+                font-size: 3rem;
+            }
+        }
+
+        .flex-auto {
+            flex: 0 0 auto;
+        }
+
+        .h-250 {
+            height: 250px;
+        }
+
+        @media (min-width: 768px) {
+            .h-md-250 {
+                height: 250px;
+            }
+        }
+
+        /* Pagination */
+        .blog-pagination {
+            margin-bottom: 4rem;
+        }
+
+        /*
+ * Blog posts
+ */
+        .blog-post {
+            margin-bottom: 4rem;
+        }
+
+        .blog-post-title {
+            font-size: 2.5rem;
+        }
+
+        .blog-post-meta {
+            margin-bottom: 1.25rem;
+            color: #727272;
+        }
+
+        /*
+ * Footer
+ */
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: #727272;
+            text-align: center;
+            background-color: #2C3639;
+            border-top: .05rem solid #e5e5e5;
+        }
+
+        .blog-footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="urgent p-3">
+        <div class="container-fluid">
+            <header class="blog-header border-dark lh-1 py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center ">
+                    <div class="col-4 pt-1">
+                        <a class="link-secondary" href="#">Your ideas</a>
+                    </div>
+                    <div class="col-4 text-center   animate__animated animate__backInDown">
+                        <a class="blog-header-logo urgent text-start " href="#">It Live Ops</a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">
+
+                        <a class="btn btn-sm btn-outline-secondary" href="#">Today's Phrase</a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="nav-scroller bg-opacity-75 py-1 mb-2">
+                <nav class="nav d-flex justify-content-between animate__animated animate__bounce">
+                    <a class="p-2 rounded-pill text-bg-danger " href="#">Milano</a>
+                    <a class="p-2 rounded-pill text-bg-info " href="#">Roma</a>
+                    <a class="p-2 rounded-pill text-bg-secondary " href="#">Torino</a>
+                    <a class="p-2 rounded-pill text-bg-primary " href="#">Napoli</a>
+                    <a class="p-2 rounded-pill text-bg-light " href="#">Modena</a>
+                    <a class="p-2 rounded-pill text-bg-dark " href="#">Bologna</a>
+                    <a class="p-2 rounded-pill text-bg-light " href="#">Trieste</a>
+                    <a class="p-2 rounded-pill text-bg-primary " href="#">Verona</a>
+                    <a class="p-2 rounded-pill text-bg-secondary " href="#">Padova</a>
+                    <a class="p-2 rounded-pill text-bg-info " href="#">Firenze</a>
+                    <a class="p-2 rounded-pill text-bg-success " href="#">Monza</a>
+                    <a class="p-2 rounded-pill text-bg-danger " href="#">Messina</a>
+                </nav>
+            </div>
+        </div>
+
+        <main class="container-fluid">
+            <div class="p-4 p-md-5 mb-4 beta rounded-3 bg-gradient">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 animate__animated animate__pulse ">Blog Live Ops Ita</h1>
+                    <p class="lead my-3 text-secondary">Il primo Blog dedicato agli agenti annoiati,non perdere
+                        l'occasione</p>
+                    <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+                </div>
+            </div>
+    </div>
+    <div class="row bg-opacity-25  px-5 mb-2">
+        <div class="col-md-6">
+            <div
+                class="row animate__animated animate__rubberBand g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column  position-static text-bg-info">
+                    <strong class="d-inline-block mb-2 text-primary">Alfredo</strong>
+                    <h3 class="mb-0 purple">Riders alla ribalta</h3>
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                        additional content.</p>
+                    <a href="https://sites.google.com/justeattakeaway.com/testemanuele/live-ops-blog"
+                        class="link-danger">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+
+                    <svg class="bd-placeholder-img animate__animated animate__rubberBand" width="200" height="250"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" />
+                        <image
+                            href="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                            width="100%" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div
+                class="row animate__animated animate__rubberBand bg-opacity-25 g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column  position-static text-bg-success">
+                    <strong class="d-inline-block mb-2 ">Emanuele</strong>
+                    <h3 class="mb-0 pink">Cacio & pepe</h3>
+                    <div class="mb-1 text-muted">Nov 11</div>
+                    <p class="mb-auto ">Al cuore non si comanda ,ma di cosa stiamo parlando.?</p>
+                    <a href="" class=" urgent">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img animate__animated animate__rubberBand" width="200" height="250"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" />
+                        <image
+                            href="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80"
+                            width="100%" />
+
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion px-5 animate__animated animate__tada " id="accordionExample">
+        <div class="accordion-item bg-transparent ">
+            <h2 class="accordion-header bg-transparent text-danger" id="headingOne">
+                <button class="accordion-button bg-transparent text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Procedura per Incident report
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show bg-transparent " aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body bg-transparent text-success">
+                    <strong>Avvisa Seniors&Localops</strong> Now I will take the oil of Life, the eggs of Destiny, the
+                    pan of Justice, the sausage of Truth, and go to cook the scrambled eggs of the Apocalypse.
+                    <code>Alfredo</code> believe in your dreams,but don't sleep too much
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item bg-transparent ">
+            <h2 class="accordion-header bg-transparent" id="headingTwo">
+                <button class="accordion-button bg-transparent text-warning collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Nuova procedura tickets
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse bg-transparent text-white"
+                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body bg-transparent text-info">
+                    <strong>Life is justeattakeaway</strong> "Teamwork is the ability to work together toward a common
+                    vision. The ability to direct individual accomplishments toward organizational objectives. It is the
+                    fuel that allows common people to attain uncommon results." <code>Maria Rosaria </code> you have to
+                    be able to work together towards a common goal
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item urgent  bg-transparent ">
+            <h2 class="accordion-header bg-transparent urgent" id="headingThree">
+                <button class="accordion-button bg-transparent text-info urgent collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Nuovo Daily Planning
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse bg-transparent " aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body bg-transparent ">
+                    <strong>I love pizza so much that even when I eat pizza, I want pizza.</strong> A coke without chips
+                    is still coke, and potato without coke is just a snack hung in the air and cut off from the semantic
+                    centre.<code>Emanuele</code> you know, just eat
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row g-5 px-lg-5">
+        <div class="col-md-8">
+            <h2 class="pb-4 mb-4 p-4 border-dark text-white-50 border-bottom avorio
+           ">
+                Da casa di Susan
+            </h2>
+
+            <article class="blog-post bg-opacity-25 p-4 text-bg-secondary rounded-3 ">
+                <h2 class="blog-post-title mb-1 urgent p-4 ">Oggi sciopero</h2>
+                <p class="blog-post-meta link-danger ">January 1, 2022 by <a href="#" class="text-bg-dark">Maria</a></p>
+
+                <p class="avorio">Ho appena finito di mangiare ed ho fame un altra voltra ,ma come si deve fare??</p>
+                <hr>
+                <p class="avorio">D'altronde si sa chi fa da se fa per tre ,inutile ridircelo alle riunioni condominiali
+                </p>
+                <h2 class="urgent"> Stanco!</h2>
+                <p class="avorio">Posso mai aspettare il bus fino a mezzanotte?</p>
+                <blockquote class="blockquote">
+                    <p class="avorio">Chi la fa mi aspetti!</p>
+                </blockquote>
+                <p class="avorio">Just Eat in UK and Caffè Nero announce a new delivery partnership which sees the Just
+                    Eat platform
+                    offer the Caffè Nero menu from over 400 stores across the UK.</p>
+                <h3 class="urgent">Riccardo e Pino</h3>
+                <p class="avorio">Just Eat Takeaway.com provided sustainable, innovative seaweed lined packaging at the
+                    UEFA Europa
+                    League Final in Seville and the UEFA Women's Champions League Final in Turin. Through this
+                    collaboration, the platform seeks to expand its packaging influence to football sponsorship, helping
+                    to scale innovative sustainable packaging solutions beyond its restaurant efforts.</p>
+                <ul>
+                    <li>Allora basta</li>
+                    <li>Secondo piatto sempre ,no yogurt</li>
+                    <li>E soprattutto no sedano</li>
+                </ul>
+                <p>Il capo ci vuole alla base alle 8 </p>
+                <ol>
+                    <li>Spiedini di zucchero</li>
+                    <li>Saranno davvero buoni questi spiedini?</li>
+                    <li>Meglio le chele di granchio</li>
+                </ol>
+                <p>Maria va in vacanza</p>
+                <dl>
+                    <dt>Best agent of the week</dt>
+                    <dd>Luca Parisi</dd>
+                    <dt>Miglior stuntman su Dispo</dt>
+                    <dd>Piero Carpecci</dd>
+                    <dt>Vincitore della sagra del bitterballen</dt>
+                    <dd> Mario cavalloni</dd>
+                </dl>
+                <h2 class="urgent">Real Life</h2>
+                <p>Have compassion and empathy in your heart. Many people are suffering deep emotional anguish beneath
+                    the surface of their lives, and smile even as they hurt inside. <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Alfredo's team</a>.</p>
+                <ul>
+                    <li><strong>To call me in London</strong>, use <code
+                            class="language-plaintext highlighter-rouge">&lt;The phone&gt;</code>.</li>
+                    <li><em>To remove rust</em>, use <code
+                            class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                    <li>Alla fine <abbr title="HyperText Markup Language">Lello</abbr> should use <code
+                            class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, back again <code
+                            class="language-plaintext highlighter-rouge">Ouch</code> you knew it
+                    </li>
+                    <li>Citations, like <cite>— Mark Otto</cite>, should use <code
+                            class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                    <li><del>De Santis</del> Procedete pure <code
+                            class="language-plaintext highlighter-rouge">&lt;Pronto&gt;</code> e <ins>Ci sei?</ins>
+                        Mamma
+                        eccoci <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                    <li class="avorio">Hai chiuso? <sup>Sempre</sup> Lunedi <code
+                            class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> Lo sai
+                        <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.
+                    </li>
+                </ul>
+                <p class="avorio">Pronti partenza via</p>
+                <h2 class="urgent">Eccolo</h2>
+                <p class="avorio"> Jem, see if you can stand in Bob Ewell’s shoes a minute. I destroyed his last shred
+                    of credibility
+                    at that trial, if he had any to begin with. </p>
+                <h3 class="urgent">Un caffe al tavolo 2 </h3>
+                <p class="avorio">Modern education is premised strongly on materialistic values. It is vital that when
+                    educating our
+                    children’s brains that we do not neglect to educate their hearts, a key element of which has to be
+                    the nurturing of our compassionate nature.</p>
+                <pre><code>Vengo subito!</code></pre>
+                <p class="avorio">This is some additional paragraph placeholder content. It's a slightly shorter version
+                    of the other
+                    highly repetitive body text used throughout.</p>
+            </article>
+            <ul class="nav nav-tabs p-4 border-dark" id="myTab">
+                <li class="nav-item">
+                    <button class="nav-link active text-bg-dark bg-opacity-10" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button">Friendlily</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link text-bg-dark bg-opacity-10" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button">Pronk</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link text-bg-dark bg-opacity-10" id="contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#contact-tab-pane" type="button">Abear</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link text-bg-dark bg-opacity-10" id="disabled-tab" data-bs-toggle="tab"
+                        data-bs-target="#disabled-tab-pane" type="button">Cabotage</button>
+                </li>
+            </ul>
+            <div class="tab-content text-white p-4 " id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane">No, it’s not misspelled. It sounds wrong,
+                    but—it’s right! Yes, there’s an adverb form of “friendly,” meaning in a friendly way. For example:
+                    “He friendlily questioned my use of the word friendlily.”</div>
+                <div class="tab-pane fade" id="profile-tab-pane">A pronk is a weak or foolish individual. It is also
+                    used as a verb when referring to antelope and similar animals, which means to leap with an arched
+                    back and stiff legs as a form of display or a sign it is threatened.</div>
+                <div class="tab-pane fade" id="contact-tab-pane">Not the grizzly, terrifying kind! This word has nothing
+                    to do with animals. Abear means to endure or put up with, which means you could feasibly say “I
+                    abeared this encounter with a bear!”</div>
+                <div class="tab-pane fade" id="disabled-tab-pane">Let’s make one thing clear: Cabotage does not mean to
+                    sabotage a taxi driver. So what’s the real definition?
+
+                    It means the transport of goods and passengers between two places in the same country, or the right
+                    to do so. Originally, it only referred to coastal travel between ports, but the definition has
+                    expanded to include travel by air, railway, and by road. </div>
+            </div>
+
+            <article class="blog-post p-4 bg-opacity-25 text-bg-dark rounded-3">
+                <h2 class="blog-post-title mb-1 urgent">Le storie piu' strane della settimana</h2>
+                <p class="blog-post-meta text-bg-dark">December 23, 2020 by <a href="#" class="text-bg-dark">Jacob</a>
+                </p>
+
+                <p>I believe that what we regret most are our failures of courage, whether it’s the courage to be
+                    kinder, to show up, to say how we feel, to set boundaries, to be good to ourselves. For that reason,
+                    regret can be the birthplace of empathy.</p>
+                <blockquote>
+                    <p>Longer quote goes here, maybe with some <strong>Eccolo</strong> in the middle of it.</p>
+                </blockquote>
+                <p>So if spitting in my face and threatening me saved Mayella Ewell one extra beating, that’s something
+                    I’ll gladly take. He had to take it out on somebody, and I’d rather it be me than that household of
+                    children out there.</p>
+                <h3 class="urgent">Schedule</h3>
+                <p>Ci sara' davvero F6?</p>
+                <table class="table text-bg-dark">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Upvotes</th>
+                            <th>Downvotes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luigi</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Barbara</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Brian</td>
+                            <td>7</td>
+                            <td>9</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Totals</td>
+                            <td>21</td>
+                            <td>23</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <p>Le migliori storie da oggi per voi in 4k</p>
+            </article>
+            <div class="row text-bg-dark bg-opacity-10 p-4">
+                <div class="col-4 ">
+                    <div class="list-group " id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action text-bg-dark active border-light border-opacity-10" id="list-home-list"
+                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Spondulicks</a>
+                        <a class="list-group-item list-group-item-action text-bg-dark border-light border-opacity-10" id="list-profile-list"
+                            data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Roma</a>
+                        <a class="list-group-item list-group-item-action text-bg-dark border-light border-opacity-10" id="list-messages-list"
+                            data-bs-toggle="list" href="#list-messages" role="tab"
+                            aria-controls="list-messages">Napoli</a>
+                        <a class="list-group-item list-group-item-action text-bg-dark border-light border-opacity-10" id="list-settings-list"
+                            data-bs-toggle="list" href="#list-settings" role="tab"
+                            aria-controls="list-settings">Torino</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                            aria-labelledby="list-home-list">It’s a bummer that this antiquated word for “cash” hasn’t
+                            been used since the eighteenth century;I would love to hear it in rap songs!</div>
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">Questo e' un test di scrittura in paragrafo per Roma
+                        </div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                            aria-labelledby="list-messages-list">Questo e' un test di scrittura in paragrafo per Napoli
+                        </div>
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                            aria-labelledby="list-settings-list">Questo e' un test di scrittura in paragrafo per Torino
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <article class="blog-post p-4 text-bg-success bg-opacity-10 rounded-3">
+                <h2 class="blog-post-title mb-1 urgent">Solo bad performers </h2>
+                <p class="blog-post-meta">December 14, 2022 by <a href="#">Emanuele</a></p>
+
+                <p>Vulnerability is the birthplace of love, belonging, joy, courage, empathy, and creativity. It is the
+                    source of hope, empathy, accountability, and authenticity. If we want greater clarity in our purpose
+                    or deeper and more meaningful spiritual lives, vulnerability is the path.</p>
+                <ul>
+                    <li>Primo posto</li>
+                    <li>Secondo posto</li>
+                    <li>Terzo posto</li>
+                </ul>
+                <p>
+                    Leadership is about empathy. It is about having the ability to relate to and connect with people for
+                    the purpose of inspiring and empowering their lives.</p>
+            </article>
+            <p class="ms-4 urgent">Test della verita' scegli A o B</p>
+            <nav class="blog-pagination" aria-label="Pagination">
+                <a class="btn btn-outline-primary  rounded-pill me- 1 ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    href="#">Risposta A</a>
+                <a class="btn btn-outline-secondary align-self-end rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                    href="#">Risposta B</a>
+            </nav>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">La risposta giusta e':</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Beccato!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel2">La risposta sbagliata e'</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Hai sbagliato semplicemente
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 ">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-opacity-75 text-bg-light rounded">
+                    <h4 class="fst-italic violetto">Sagre</h4>
+                    <p class="mb-0 bg-transparent bg-opacity-75 ">Ragazzi nn vi abboffate alle 19 arriva la porchetta di
+                        zio
+                        Pasquale💚
+                    </p>
+                </div>
+
+                <div class="p-4 ">
+                    <h4 class="fst-italic urgent">Guinnes dei primati per mese</h4>
+
+                    <ol class="list-unstyled mb-0">
+                        <li><a class="link-danger" href="#">March 2022</a></li>
+                        <li><a href="#">February 2022</a></li>
+                        <li><a href="#">January 2022</a></li>
+                        <li><a href="#">December 2022</a></li>
+                        <li><a href="#">November 2022</a></li>
+                        <li><a href="#">October 2022</a></li>
+                        <li><a href="#">September 2022</a></li>
+                        <li><a href="#">August 2022</a></li>
+                        <li><a href="#">July 2022</a></li>
+                        <li><a href="#">June 2022</a></li>
+                        <li><a href="#">May 2022</a></li>
+                        <li><a href="#">April 2022</a></li>
+
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic text-success">Altrove</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">Slack</a></li>
+                        <li><a href="#">Sendbird</a></li>
+                        <li><a href="#">Dispo</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="blog-footer">
+        <p>Sito fatto per <a href="alfredo.forte@justeattakeaway.com">LiveOps😪💤</a> da <a
+                href="alfredo.forte@justeattakeaway.com">Alfredo</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
